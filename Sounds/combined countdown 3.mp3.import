@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvtj1gjp6ceyy"
+path="res://.godot/imported/combined countdown 3.mp3-be9e98ab33213049837a8b6e845d3cf3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/combined countdown 3.mp3"
+dest_files=["res://.godot/imported/combined countdown 3.mp3-be9e98ab33213049837a8b6e845d3cf3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

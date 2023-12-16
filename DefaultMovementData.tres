@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerMovementData" load_steps=2 format=3 uid="uid://b7fneh1nalgry"]
+
+[ext_resource type="Script" path="res://PlayerMovementData.gd" id="1_bobyj"]
+
+[resource]
+script = ExtResource("1_bobyj")
+speed = 130.0
+acceleration = 1000.0
+friction = 1000.0
+jump_velocity = -250.0
+gravity_scale = 0.8
+air_resistance = 200.0
+air_acceleration = 400.0

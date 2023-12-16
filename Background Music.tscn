@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjqu4rlyoes1l"]
+
+[ext_resource type="AudioStream" uid="uid://dfxcwdh2rq7vm" path="res://Sounds/8bit music 2.mp3" id="1_rm1fu"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_rm1fu")
+volume_db = -17.333
+autoplay = true

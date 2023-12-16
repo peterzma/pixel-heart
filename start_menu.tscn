@@ -1,0 +1,133 @@
+[gd_scene load_steps=13 format=3 uid="uid://dgsxv02ll2mtc"]
+
+[ext_resource type="Script" path="res://start_menu.gd" id="1_j3ys7"]
+[ext_resource type="Texture2D" uid="uid://uvt0q4fy63g8" path="res://player.png" id="2_qjk2a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c1d4"]
+font_size = 32
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wv8d"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htj01"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(144, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yu2c"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(24, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ktg2"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(48, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vdyr"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(72, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sstdr"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(96, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqpf7"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(120, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i8ge"]
+atlas = ExtResource("2_qjk2a")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i1vr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wv8d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htj01")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yu2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ktg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vdyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sstdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqpf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i8ge")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="StartMenu" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j3ys7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 92
+
+[node name="Title" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PIXEL HEART"
+label_settings = SubResource("LabelSettings_4c1d4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Quit"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(80, 88)
+sprite_frames = SubResource("SpriteFrames_5i1vr")
+animation = &"run"
+autoplay = "run"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(240, 88)
+sprite_frames = SubResource("SpriteFrames_5i1vr")
+animation = &"run"
+autoplay = "run"
+
+[connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
