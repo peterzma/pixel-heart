@@ -2,7 +2,7 @@
 
 ## Overview
 
-Pixel Heart is a 2D black-and-white platformer developed in Godot. You navigate through 30 progressively challenging levels, collecting all hearts to progress while using advanced platforming mechanics.
+Pixel Heart is a 2D black-and-white platformer developed in Godot. You navigate through 30 progressively challenging levels, collecting all hearts to progress while using advanced platforming mechanics. Produced during college and eventually uploaded to GitHub.
 
 ## Features
 
