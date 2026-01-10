@@ -29,7 +29,7 @@ Pixel Heart is a 2D black-and-white platformer developed in Godot. You navigate 
 Clone the repository:
 
 ```bash
-git clone https://github.com/quackerhacker/pixel-heart.git
+git clone https://github.com/peterzma/pixel-heart.git
 ```
 
 Open the project:
